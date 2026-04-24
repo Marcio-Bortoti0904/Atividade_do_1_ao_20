@@ -71,7 +71,7 @@ if (idade_pessoa >= 0 && idade_pessoa <= 12) {
 // 8. Simulador de Login
 console.log("\n 08. Simulador de Login:");
 const usuario = "admin";
-let senha = 12345;
+let senha = "12345";
 
 if (usuario == "admin" && senha === "12345") {
     console.log("Acesso concedido.");
@@ -103,3 +103,23 @@ if (ano % 4 === 0 && ano % 100 != 0 || ano % 400 === 0) {
 } else {
     console.log("Não é um ano bissexto!")
 }
+
+// 11. Dia útil ou fim de semana
+console.log("\n 11. Dia Útil ou fim de semana:");
+let dia = 7;
+if (dia === 1 || dia === 7) {
+    console.log("Este dia corresponde a um fim de semana.")
+} else if (dia > 1 && dia < 7) {
+    console.log("Este dia corresponde a um dia da semana.")
+} else {
+    console.log("Não possue dia correspondente.")
+}
+
+// 12. Contagem Simples
+console.log("\n 12. Contagem Simples:")
+for (let i = 1; i <= 15; i++) {
+    console.log(i);
+}
+
+// 13. Somatório de 1 AO 100
+console.log("\n 13. Somatório de 1 ao 100:");
