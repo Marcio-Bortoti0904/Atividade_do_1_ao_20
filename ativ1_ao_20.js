@@ -16,16 +16,7 @@ let res = 0;
 let peso = 70;
 let altura = 1.70;
 let IMC = peso / (altura**2);
-if (IMC < 18.5) {
-  res = "Abaixo do peso.";
-} else if (IMC >= 18.5 && IMC <= 24.9) {
-  res = "Peso Normal(ideal).";
-} else if (IMC >= 25.0 && IMC <= 29.9) {
-  res = "Sobrepeso.";
-} else {
-  res = ("Obesidade.");
-}
-console.log(`Com um peso de ${peso} e altura de ${altura}\n O IMC é ${IMC}\n Resultado: ${res}`);
+console.log(`Com um peso de ${peso} e altura de ${altura}\n O IMC é ${IMC}.`);
 
 // 4. Sistemas de Descontos
 console.log("\n04. Sistema de Desconto:")
@@ -142,13 +133,14 @@ for(let cont = 1; cont <= 10; cont++) {
 console.log("\n15. Caçador de Números Pares:");
 for (let numero = 1; numero <= 50; numero++) {
     if (numero % 2 == 0) {
-        console.log(numero);
+        console.log(`Par: ${numero}.`);
     }
 }
 
 // 16. Contagem Regressiva
 console.log("\n16. Contagem Regressiva:")
 let relogio = 10;
+
 while (relogio != 0) {
     console.log(relogio);
     relogio--;
@@ -156,4 +148,62 @@ while (relogio != 0) {
         console.log("Feliz Ano Novo!");
         break;
     }
+}
+
+// 17. Calculadora de Fatorial
+console.log("\n17. Calculadora de Fatorial:");
+let num_int = 7;
+let fat = 1;
+
+for (let i = num_int; i > 1; i--) {
+    fat *= i;
+}
+
+console.log(`Fatorial de ${num_int} é ${fat}`);
+
+// 18. Cofre com Limites de Tentativas
+console.log("\n18. Cofre com Limites de Tentativas:");
+let senhaCorreta = "1256";
+let tentativas = 3; 
+let array_tent = ["0000", "1123", "1250"];
+
+for (let i = 0; i < array_tent.length; i++) {
+    if (array_tent[i] === senhaCorreta) {
+        console.log("Cofre Aberto!");
+    } else {
+        console.log("Cofre Fechado!");
+        tentativas--;
+        if (tentativas == 0) {
+            break;
+        }
+    }
+}
+
+// 19. Testador de Números Primos
+console.log("\n19. Testador de Números Primos:")
+let teste = 5;
+let i = 1;
+let primo = 0;
+
+while (i < teste) {
+    if (teste%i == 0) {
+        primo++;
+    }
+    i++;
+}
+if (primo < 2 && teste > 1) {
+    console.log(`${teste} é primo.`);
+} else {
+    console.log(`${teste} não é primo.`);
+}
+// 20. Sequência de Fibonacci
+console.log("\n20. Sequência de Fibonacci:");
+let termo_anterior = 0;
+let termo_atual = 1;
+
+for (let i = 1; i <= 10; i++) {
+    console.log(termo_anterior);
+    let prox_termo = termo_anterior + termo_atual;
+    termo_anterior = termo_atual;
+    termo_atual = prox_termo;
 }
