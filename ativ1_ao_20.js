@@ -163,7 +163,7 @@ console.log(`Fatorial de ${num_int} é ${fat}`);
 
 // 18. Cofre com Limites de Tentativas
 console.log("\n18. Cofre com Limites de Tentativas:");
-let senhaCorreta = "1256";
+let senhaCorreta = "1250";
 let tentativas = 3; 
 let array_tent = ["0000", "1123", "1250"];
 
