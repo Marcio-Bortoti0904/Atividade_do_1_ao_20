@@ -191,11 +191,12 @@ while (i < teste) {
     }
     i++;
 }
-if (primo < 2 && teste > 1) {
+if (primo <= 2 && teste > 1) {
     console.log(`${teste} é primo.`);
 } else {
     console.log(`${teste} não é primo.`);
 }
+
 // 20. Sequência de Fibonacci
 console.log("\n20. Sequência de Fibonacci:");
 let termo_anterior = 0;
